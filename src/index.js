@@ -7,3 +7,5 @@ window.addEventListener("load", function() {
 });
 
 
+const selectedCurrency = document.querySelectorAll("input[name='curr']:checked");
+document.querySelector("result").innerText = ${response.conversion_rates.[selectedCurrency]}
