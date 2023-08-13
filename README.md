@@ -1,8 +1,8 @@
-# _Solar Age Calculator_
+# _Currency Exchanger_
 
 #### By _Kari Vigna_
 
-#### _This shows your age on different planets._
+#### _Converts USD into other currency._
 
 ## Technologies Used
 
@@ -12,15 +12,14 @@
 
 ## Description
 
-_This takes a users inputted age and returns their "age" on four different planets. It also shows how many years on each planet until any birthday and how many years since any birthday._
+_This takes any USD amount input and converts to one of 5 different currencies._
 
 ## Setup/Installation Requirements
 
 * _Clone this repository to desktop_
 * _Navigate this projects top level directory._
-* `$ npm install` - to install all dependencies.a
-* `$ npm run build`
-* `$ npm run test` - to run tests.
+* `$ npm install` - to install all dependencies.
+* `$ npm run start`
 
 ## Known Bugs
 
@@ -30,4 +29,4 @@ _This takes a users inputted age and returns their "age" on four different plane
 
 _MIT_
 
-Copyright (c) _7/30/2023_ _Kari Vigna_
+Copyright (c) _08/13/2023_ _Kari Vigna_
