@@ -1,3 +1,4 @@
+function getConversion() {
 fetch(`https://v6.exchangerate-api.com/v6/${process.env.API-KEY}/latest/USD`)
       .then(response => onRecieve_API_Response(response))      
       .catch(function(error) {
@@ -11,5 +12,5 @@ fetch(`https://v6.exchangerate-api.com/v6/${process.env.API-KEY}/latest/USD`)
             } else {
                 return response.json();
         }
-      }
+      }}
 

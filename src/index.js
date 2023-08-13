@@ -6,6 +6,13 @@ window.addEventListener("load", function() {
     console.log("page loaded js working!");
 });
 
+function handleFormSubmission(event) {
+    event.preventDefault();
+    const usdAmount = document.querySelector('#usdInput').value;
+    const selectedCurrency = document.querySelectorAll("input[name='curr']:checked");
+}
+window.addEventListener("load", function(){
+    document.querySelector("#conversion").addEventListener("submit", handleFormSubmission)
+})
 
-const selectedCurrency = document.querySelectorAll("input[name='curr']:checked");
-document.querySelector("result").innerText = ${response.conversion_rates.[selectedCurrency]}
+// document.querySelector("result").innerText = ${response.conversion_rates.[selectedCurrency]}

@@ -7,7 +7,7 @@
   <h1>Currency Converter</h1>
   <form id="Conversion">
     <label for="USD">Enter amount in USD:</label><br>
-    <input type="number"><br>
+    <input id="usdInput" type="number"><br>
     Convert to:<br>
     <input type="radio" id="eur" name="curr" value="eur" checked />
     <label for="eur">Euro</label><br>
@@ -19,7 +19,8 @@
     <label for="gbp">British Pound</label><br>
     <input type="radio" id="cad" name="curr" value="cad"/>
     <label for="cad">Canadian Dollar</label><br>
-</form><br><br>
-Converted amount: <span id="result"></span>
+    <button>See conversion</button>
+  </form><br><br>
+  Converted amount: <span id="result"></span>
 </body>
 </html>
