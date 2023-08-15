@@ -1,5 +1,6 @@
-function getConversion() {
-fetch(`https://v6.exchangerate-api.com/v6/${process.env.API-KEY}/latest/USD`)
+export default class CurrencyExchange {
+  static getConversion() {
+    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API-KEY}/latest/USD`)
       .then(response => onRecieve_API_Response(response))      
       .catch(function(error) {
         return error;
@@ -7,10 +8,12 @@ fetch(`https://v6.exchangerate-api.com/v6/${process.env.API-KEY}/latest/USD`)
 
       function onRecieve_API_Response(response) {
         if (!response.ok) {
-            const errorMessage = `${response.status} ${response.statusText}`;
-            throw new Error(errorMessage);
-            } else {
-                return response.json();
+          const errorMessage = `${response.status} ${response.statusText}`;
+          throw new Error(errorMessage);
+        } else {
+          return response.json();
         }
-      }}
+      }
+  }
+}
 
