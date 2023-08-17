@@ -5,37 +5,39 @@ import CurrencyExchange from './currency.js'
 
 window.addEventListener("load", function() {
     console.log("page loaded js working!");
+    document.getElementById("conversion").addEventListener("submit", handleFormSubmission)
 });
 
 
-function getCurrency(amt, selectedCurr) {
-    CurrencyExchange.getConversion().then((res) => {
-        if (res.result != "success") {
-            printError(res);
+function getCurrency(usdAmount) {
+    CurrencyExchange.getConversion().then((response) => {
+        if (!response.ok) {
+            printError(response);
         } else {
-            printElements(res, amt, selectedCurr);
+           printElements(response.json());
         }
     })
 }
 
-function printElements(res) {
-    console.log("Success",[res, amt, selectedCurr])
-}
-
-function printError(res) {
-    console.log("Error",res)
-}
-
-
-function handleFormSubmission(event) {
-    event.preventDefault();
-    const usdAmount = document.querySelector('#usdInput').value;
+function printElements(response) {
+    document.querySelector("result").innerText = null;
     const selectedCurrency = document.querySelectorAll("input[name='curr']:checked");
-    // document.querySelector("result").innerText = ${response.conversion_rates[selectedCurrency]
-    getCurrency()
+    const resultBox = document.getElementById("resultBox");
+    resultBox.classList.remove("hidden");
+    document.querySelector("result").innerText = `Your result is: ${response.conversion_rates[selectedCurrency]}`
 }
 
-window.addEventListener("load", function(){
-    document.querySelector("#conversion").addEventListener("submit", handleFormSubmission)
-})
+function printError(response) {
+    console.log("Error",response);
+    document.querySelector("result").innerText = `There was an error processing your data:`
+
+}
+
+
+function handleFormSubmission(e) {
+    e.preventDefault();
+    const usdAmount = document.getElementById('usdInput').value;
+    getCurrency(usdAmount);
+    }
+
 

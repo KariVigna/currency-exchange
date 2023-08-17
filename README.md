@@ -18,6 +18,9 @@ _This takes any USD amount input and converts to one of 5 different currencies._
 
 * _Clone this repository to desktop_
 * _Navigate this projects top level directory._
+* _Navigate to https://www.exchangerate-api.com/, enter e-mail and click "Get Free Key!"_
+* _Create a new directory and name it .env_
+* _Save your API key under a variable named "API_KEY"
 * `$ npm install` - to install all dependencies.
 * `$ npm run start`
 

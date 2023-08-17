@@ -5,22 +5,28 @@
 </head>
 <body>
   <h1>Currency Converter</h1>
-  <form id="Conversion">
-    <label for="USD">Enter amount in USD:</label><br>
-    <input id="usdInput" type="number"><br>
-    Convert to:<br>
-    <input type="radio" id="eur" name="curr" value="eur" checked />
-    <label for="eur">Euro</label><br>
-    <input type="radio" id="aud" name="curr" value="aud"/>
-    <label for="aud">Austrailian Dollar</label><br>
-    <input type="radio" id="jpy" name="curr" value="jpy"/>
-    <label for="jpy">Yen - JPY</label><br>
-    <input type="radio" id="gbp" name="curr" value="gbp"/>
-    <label for="gbp">British Pound</label><br>
-    <input type="radio" id="cad" name="curr" value="cad"/>
-    <label for="cad">Canadian Dollar</label><br>
-    <button>See conversion</button>
-  </form><br><br>
-  Converted amount: <span id="result"></span>
+  <div id="formBox">
+    <form id="conversion">
+      <label for="USD">Enter amount in USD:</label><br>
+      <input id="usdInput" type="number"><br><br>
+      Convert to:<br>
+      <input type="radio" id="eur" name="curr" value="eur" checked />
+      <label for="eur">Euro</label><br>
+      <input type="radio" id="aud" name="curr" value="aud"/>
+      <label for="aud">Austrailian Dollar</label><br>
+      <input type="radio" id="jpy" name="curr" value="jpy"/>
+      <label for="jpy">Yen - JPY</label><br>
+      <input type="radio" id="gbp" name="curr" value="gbp"/>
+      <label for="gbp">British Pound</label><br>
+      <input type="radio" id="cad" name="curr" value="cad"/>
+      <label for="cad">Canadian Dollar</label><br>
+      <button type="submit">See conversion</button>
+    </form>
+  </div><br><br>
+  <div id="resultBox" class="hidden">
+    <h2>Converted amount:</h2><br>
+    <span id="result"></span><br>
+    <img src="./css/img/billsimg.jpeg">
+  </div>
 </body>
 </html>

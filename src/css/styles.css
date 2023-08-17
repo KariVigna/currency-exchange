@@ -1,5 +1,35 @@
 body {
+  /* background-image: url("./img/billsimg.jpeg"); */
   background-color: seagreen;
   font-size: larger;
   text-align: center;
+}
+ h1 {
+  font-family: cursive;
+ }
+
+ h2 {
+  font-family: cursive;
+ }
+
+#formBox {
+  box-sizing: border-box;
+  border-color: black;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 25px;
+  padding: 20px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  background-color: lightgreen;
+
+}
+.hidden {
+  display: none;
+}
+
+#resultBox {
+
 }
