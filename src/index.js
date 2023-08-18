@@ -13,7 +13,7 @@ function getCurrency(usdAmount) {
         if (!response.ok) {
             printError(response);
         } else {
-           printElements(response.json());
+           printElements(response);
         }
     })
 }
@@ -22,11 +22,14 @@ function printElements(response) {
     document.querySelector("result").innerText = null;
     const resultBox = document.getElementById("resultBox");
     resultBox.classList.remove("hidden");
-    document.querySelector("result").innerText = `Your result is: ${response.conversion_result}`
+    document.getElementById("result").innerText = `Your result is: ${response.conversion_result}`
 }
 
 function printError(error) {
-    document.querySelector("result").innerText = `There was an error processing your data: ${error}`
+    // document.querySelector("result").innerText = null;
+    const resultBox = document.getElementById("resultBox");
+    resultBox.classList.remove("hidden");
+    document.getElementById("result").innerText = `There was an error processing your data: ${error}`
 }
 
 function handleFormSubmission(e) {
@@ -35,6 +38,7 @@ function handleFormSubmission(e) {
     const targetCode = document.querySelectorAll("input[name='curr']:checked");
     // document.getElementById("usdInput").value = null;
     getCurrency(usdAmount, targetCode);
+    console.log("form submitted!")
     }
 
 
