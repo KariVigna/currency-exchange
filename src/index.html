@@ -10,22 +10,23 @@
       <label for="USD">Enter amount in USD:</label><br>
       <input id="usdInput" type="number"><br><br>
       Convert to:<br>
-      <input type="radio" id="eur" name="curr" value="eur" checked />
+      <input type="radio" id="eur" name="curr" value="EUR" checked />
       <label for="eur">Euro</label><br>
-      <input type="radio" id="aud" name="curr" value="aud"/>
+      <input type="radio" id="aud" name="curr" value="AUD"/>
       <label for="aud">Austrailian Dollar</label><br>
-      <input type="radio" id="jpy" name="curr" value="jpy"/>
+      <input type="radio" id="jpy" name="curr" value="JPY"/>
       <label for="jpy">Yen - JPY</label><br>
-      <input type="radio" id="gbp" name="curr" value="gbp"/>
+      <input type="radio" id="gbp" name="curr" value="GBP"/>
       <label for="gbp">British Pound</label><br>
-      <input type="radio" id="cad" name="curr" value="cad"/>
+      <input type="radio" id="cad" name="curr" value="CAD"/>
       <label for="cad">Canadian Dollar</label><br>
-      <button type="submit">See conversion</button>
+      <button type="submit">See Conversion</button>
     </form>
   </div><br><br>
   <div id="resultBox" class="hidden">
     <h2>Converted amount:</h2><br>
     <span id="result"></span><br>
+    <button class="reload">Clear Form</button>
   </div>
 </body>
 </html>

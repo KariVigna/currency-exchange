@@ -6,14 +6,14 @@ export default class CurrencyExchange {
         return error;
       });
 
-      function onRecieve_API_Response(response) {
-        if (!response.ok) {
-          const errorMessage = `${response.status} ${response.statusText}`;
-          throw new Error(errorMessage);
-        } else {
-          return response.json();
-        }
+    function onRecieve_API_Response(response) {
+      if (!response.ok) {
+        const errorMessage = `${response.status} ${response.statusText}`;
+        throw new Error(errorMessage);
+      } else {
+        return response.json();
       }
+    }
   }
 }
 
