@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
 
 function getCurrency(usdAmount, targetCode) {
     CurrencyExchange.getCurrency(usdAmount, targetCode).then((response) => {
-        if (response.data === 200) {
+        if (response.result === "success") {
             printElements(response, usdAmount, targetCode);
         } else {
            printError(response);
@@ -33,14 +33,13 @@ function printElements(response, usdAmount, targetCode) {
     document.getElementById("result").innerText = `Your result is: ${response.conversion_result}`;
 }
 
-function printError(error) {
+function printError(response) {
     // document.querySelector("result").innerText = null;
     const resultBox = document.getElementById("resultBox");
     resultBox.classList.remove("hidden");
-    console.log("error")
-    console.log(response)
-    document.getElementById("result").innerText = `There was an error processing your data: ${error}`;
+    console.log("error");
+    console.log(response);
+    document.getElementById("result").innerText = `There was an error processing your data: ${response}`;
 }
-
 });
 
